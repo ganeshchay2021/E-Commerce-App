@@ -31,5 +31,18 @@ class AllproductBloc extends Bloc<ProductEvent, CommonState> {
         );
       },
     );
+    
+    on<RefreshProductEvent>(
+      (event, emit) async {
+        emit(CommonLoadingState(showLoading: false));
+        final result = await productRepository.fetcAllProduct();
+        result.fold(
+        (data) => emit(CommonSuccessState<List<Product>>(userModel: data)),
+        (error) => emit(
+          CommonErrorState(errorMsg: error),
+        ),
+      );
+      },
+    );
   }
 }

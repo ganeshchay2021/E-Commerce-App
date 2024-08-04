@@ -4,3 +4,6 @@ abstract class ProductEvent {}
 class FetchAllProductEvent extends ProductEvent {}
 
 class LoadMoreProductEvent extends ProductEvent {}
+
+class RefreshProductEvent extends ProductEvent {}
+
