@@ -1,6 +1,6 @@
 # myecomapp
 
-A new Flutter project.
+My Favorite project where i learn login with social Medial like facebook, google. I also have learn Token Auhentication, API integrations, JSON Seraliazation, Model etc. 
 
 ## Getting Started
 
